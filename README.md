@@ -8,4 +8,4 @@ Displays movies and also searches
 ## Run
 * Create a package Java -jar "<<'input here-jar-name'>>"
 * Go to https://localhost:8080/movies
-* > Best way to view your latest movies and series 🎬🍿
+* > Best way to view your latest movies and series 🎬🍿 on [MovieApp](https://movienewest.herokuapp.com/)
