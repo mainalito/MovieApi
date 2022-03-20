@@ -24,10 +24,9 @@
 			<img class="card-img-top" th:src="${movie.poster_path}" alt="Card image cap">
 			<div class="card-body ">
 				<h5 class="card-title" th:text="${movie.original_title}">Card title</h5>
-				<!--<p class="card-text" th:text="${movie.overview}">Some quick example text to build on the card title and
-					make up the bulk of the card's
-					content.</p> -->
+			
 				<span class="badge badge-success" th:text=${movie.vote_average}></span>
+				<a href="#" th:href="@{/movie/{id}(id=${movie.id})}"  class="badge badge-success">Trailer</a>
 			</div>
 		</div>
 	</div>

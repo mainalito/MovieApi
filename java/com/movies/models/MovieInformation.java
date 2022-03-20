@@ -7,6 +7,7 @@ public class MovieInformation {
 	private float vote_average;
 	private float vote_count;
 	private String poster_path;
+	private String id;
 	public String getOverview() {
 		return overview;
 	}
@@ -37,8 +38,24 @@ public class MovieInformation {
 	public void setPoster_path(String poster_path) {
 		this.poster_path = poster_path;
 	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	
 
-	
+	@Override
+	public String toString() {
+		return "{" +
+			" overview='" + getOverview() + "'" +
+			", original_title='" + getOriginal_title() + "'" +
+			", vote_average='" + getVote_average() + "'" +
+			", vote_count='" + getVote_count() + "'" +
+			", poster_path='" + getPoster_path() + "'" +
+			", id='" + getId() + "'" +
+			"}";
+	}
 
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Movies App Error page</title>
+	
+
+</head>
+ <body>
+     <style th:inline="css">
+         body{
+             background-color:black;
+             min-height: 100vh;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             overflow: hidden;
+             color:white;
+         }
+     </style>
+        <p th:text="${error}"></p>
+
+
+
+</body>
+
+</html>

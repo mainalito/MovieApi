@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link th:href="@{/style.css}" rel="stylesheet" />
+	<title>Movies App</title>
+
+</head>
+
+<!-- <body>
+<div  class="container-fluid">
+	<nav class="navbar navbar-light bg-light justify-content-between">
+		<a class="navbar-brand">MovieApp</a>
+		<form class="form-inline" th:attr="action=@{/search}" method="GET">
+			<input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</nav>
+	<!--<img id="card-img-top" th:src="${m.backdrop_path}" alt="Card image cap">-->
+	<!-- <div class="card-main">
+
+		<div class="card-body" th:each="m :${movie}">
+			
+
+				.card-body {
+					color: white;
+					font-weight: bold;
+				}
+
+				.p {
+					color: white;
+					font-weight: bold;
+					font-size: 4rem;
+				}
+
+				.card-main {
+
+
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					padding-left: 2rem;
+					padding-right: 2rem;
+					min-height: 90vh;
+					flex-wrap:wrap ;
+				}
+
+				.card-body {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+
+				}
+
+				h1,
+				p {
+					margin: 0;
+					font-weight: bold;
+				}
+
+				.trailer {
+					color: white;
+					font-weight: bold;
+					font-size: 2rem;
+				}
+
+				
+			</style>
+			<h1 th:text="${m.original_title}">Card title</h1>
+			<p class="card-text" th:text="${m.overview}"></p>
+		</div>
+		<div class="ratio ratio-16x9" th:each="tr:${trailer}">
+
+			<iframe width="800" height="600" th:src="${tr.url}">NO OFFICIAL YOUTUBE TRAILER
+			</iframe>
+		</div>
+	</div>
+</div>
+
+
+
+</body> --> 
+<body>
+	<div class="overall">
+		<div class="container" th:each="m:${movie}">
+			<div  class="trailer" >
+				<a href="" th:href="@{/movie/trailer/{id}(id=${m.id})}">Youtube</a>
+			</div> 
+			<style th:inline="css">
+				body {
+					background-image: url([[${m.backdrop_path}]]);
+					background-size: cover;
+				}
+			</style>
+			<div class="header">
+				<h1 th:text="${m.original_title}">Star Wars: The Last Jedi</h1>
+				<span th:text="${m.vote_average}">7.4/10</span>
+			</div> 
+			<div class="model-movie">
+				<div class="details-image">
+					<p>Action & Adeventure</p>
+					<div class="image">
+						<img th:src="${m.poster_path}" alt="" srcset="">
+					</div>
+					<div class="price">
+						<div class="cost">
+							<span>$19.00</span>
+						</div>
+					
+							<button>Buy</button>
+					
+					</div>
+				</div>    
+					<div class="movie-info">
+						<p style="font-weight:700;" >About the movie</p>
+						<p th:text="${m.overview}">
+						</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+	</body>
+</html>

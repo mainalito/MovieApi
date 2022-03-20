@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+body{
+    /* background-color: #F2F4F9; */
+    padding: 2rem 2rem  2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    margin: 0;
+ 
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 2rem  0 2rem; */
+}
+ .header span{
+    color: rebeccapurple;
+    font-size: 1.5rem;
+    margin:0;
+}
+.header h1{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.details-image .image img{
+    height: 250px;
+    width:200px;
+    object-fit: cover;
+}
+
+.model-movie{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.details-image{
+    /* padding: 0 2rem 0 2rem; */
+    margin-right:2rem;
+}
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price .cost{
+    color: rgb(2, 1, 1);
+    font-size: 1.4rem;
+}
+button{
+ 
+    cursor: pointer;
+    border-radius: 1.5rem ;
+    padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+    font-size: 1rem;
+    border-color: black;
+}
+.overall{
+    background-color: white;
+    width: 70%;
+     box-shadow: 1px 1px  10px 5px rgba(209, 192, 192, 0.5); 
+     /* vertical, horizontal, blur, spread */
+     padding: 1rem 2rem 1rem 2rem;
+     
+}
+a{
+        font: bold 2rem;
+        text-decoration: none;
+        background-color: rgb(160, 90, 230);
+        color: black;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-top: 1px solid rebeccapurple;
+        border-right: 1px solid rebeccapurple;
+        border-bottom: 1px solid rebeccapurple;
+        border-left: 1px solid rebeccapurple;
+        border-radius: 1.5rem;
+}
+ .trailer{
+     display: flex;
+     justify-content: flex-end;
+
+ }
+ .trailer a{
+     text-decoration: none;
+ }
+ /* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 768px) {
+   .overall{
+       width: 100%;
+   }
+   .model-movie{
+       flex-wrap: wrap;
+   }
+}
+
+  
